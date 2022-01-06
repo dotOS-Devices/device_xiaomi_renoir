@@ -44,6 +44,7 @@ std::vector<std::string> ro_props_default_source_order = {
     "system.",
     "system_ext.",
     "vendor.",
+    "vendor_dlkm."
 };
 
 void property_override(char const prop[], char const value[], bool add = true)
@@ -106,25 +107,26 @@ void vendor_load_properties() {
     std::string description;
     std::string mod_device;
 
+    device = "renoir";
+
     if (region == "GLOBAL") {
         model = "M2101K9G";
-        device = "renoir";
         fingerprint = "Xiaomi/renoir_eea/renoir:11/RKQ1.201112.002/V12.5.6.0.RKIEUXM:user/release-keys";
         description = "renoir_eea-user 11 RKQ1.201112.002 V12.5.6.0.RKIEUXM release-keys";
         mod_device = "renoir_eea_global";
     } else if (region == "JP") {
-            model = "M2101K9R";
-            device = "renoir";
-            fingerprint = "Xiaomi/renoir_jp/renoir:11/RKQ1.201112.002/V12.5.4.0.RKIJPXM:user/release-keys";
-            description = "renoir-user 11 RKQ1.201112.002 V12.5.4.0.RKIJPXM release-keys";
-            mod_device = "renoir_jp_global";
-        } else {
-                model = "M2101K9G";
-                device = "renoir";
-                fingerprint = "Xiaomi/renoir/renoir:11/RKQ1.201112.002/V12.5.5.0.RKIMIXM:user/release-keys";
-                description = "renoir-user 11 RKQ1.201112.002 V12.5.5.0.RKIMIXM release-keys";
-                mod_device = "renoir_global";
-        }
+        model = "M2101K9R";
+        device = "renoir";
+        fingerprint = "Xiaomi/renoir_jp/renoir:11/RKQ1.201112.002/V12.5.4.0.RKIJPXM:user/release-keys";
+        description = "renoir-user 11 RKQ1.201112.002 V12.5.4.0.RKIJPXM release-keys";
+        mod_device = "renoir_jp_global";
+    } else {
+        model = "M2101K9G";
+        device = "renoir";
+        fingerprint = "Xiaomi/renoir/renoir:11/RKQ1.201112.002/V12.5.5.0.RKIMIXM:user/release-keys";
+        description = "renoir-user 11 RKQ1.201112.002 V12.5.5.0.RKIMIXM release-keys";
+        mod_device = "renoir_global";
+    }
 
     set_ro_build_prop("fingerprint", fingerprint);
     set_ro_product_prop("device", device);
