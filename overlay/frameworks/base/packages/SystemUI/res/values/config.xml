@@ -26,4 +26,6 @@
     screen directly in front of the sensor.  -->
     <dimen name="physical_fingerprint_sensor_center_screen_location_y">1100px</dimen>
 
+    <!-- Burn-in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
 </resources>
