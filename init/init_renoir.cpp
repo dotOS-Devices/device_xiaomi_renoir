@@ -74,6 +74,11 @@ void set_ro_product_prop(const std::string &prop, const std::string &value) {
     }
 };
 
+void load_sku() {
+    // NFC
+    property_override("ro.boot.product.hardware.sku", "nfc");
+}
+
 void load_dalvik_properties() {
     struct sysinfo sys;
 
@@ -128,7 +133,7 @@ void vendor_load_properties() {
         marketname = "Mi 11 Lite 5G";
         description = "renoir-user 11 RKQ1.201112.002 V12.5.5.0.RKIMIXM release-keys";
         mod_device = "renoir_global";
-    } 
+        }
 
     // SafetyNet workaround
     property_override("ro.boot.verifiedbootstate", "green");
@@ -144,4 +149,5 @@ void vendor_load_properties() {
         property_override("ro.product.mod_device", mod_device.c_str());
     }
     load_dalvik_properties();
+    load_sku();
 }
