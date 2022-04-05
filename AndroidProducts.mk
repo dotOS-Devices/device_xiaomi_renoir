@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_renoir.mk
+    $(LOCAL_DIR)/dot_renoir.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_renoir-user \
-    aosp_renoir-userdebug \
-    aosp_renoir-eng
+    dot_renoir-user \
+    dot_renoir-userdebug \
+    dot_renoir-eng
