@@ -79,6 +79,9 @@ vendor/lib/libhdmipassthru.so
 vendor/lib/libqtigef.so
 vendor/lib/libssrec.so
 
+# Charger (Mi Turbo Charge)
+vendor/bin/batterysecret
+
 # Camera
 vendor/etc/camera/ai_enhance.dlc
 vendor/etc/camera/aivsParams
