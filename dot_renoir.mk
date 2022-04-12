@@ -18,7 +18,7 @@ $(call inherit-product, vendor/dot/config/common.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := renoir
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Mi 11 Lite 5G
+PRODUCT_MODEL := M2101K9G
 PRODUCT_NAME := dot_renoir
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
