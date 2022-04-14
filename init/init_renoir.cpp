@@ -135,11 +135,6 @@ void vendor_load_properties() {
         mod_device = "renoir_global";
         }
 
-    // SafetyNet workaround
-    property_override("ro.boot.verifiedbootstate", "green");
-    property_override("ro.boot.flash.locked", "1");
-    fingerprint = "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys";
-    description = "walleye-user 8.1.0 OPM1.171019.011 4448085 release-keys";
     set_ro_build_prop("fingerprint", fingerprint);
     set_ro_product_prop("device", device);
     set_ro_product_prop("model", model);
