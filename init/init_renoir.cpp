@@ -115,26 +115,24 @@ void vendor_load_properties() {
     if (region == "GL") {
         model = "M2101K9G";
         device = "renoir";
-        fingerprint = "Xiaomi/renoir_eea/renoir:11/RKQ1.201112.002/V12.5.6.0.RKIEUXM:user/release-keys";
-        marketname = "Mi 11 Lite 5G";
-        description = "renoir_eea-user 11 RKQ1.201112.002 V12.5.6.0.RKIEUXM release-keys";
+        fingerprint = "Xiaomi/renoir_eea/renoir:12/RKQ1.201112.002/V13.0.5.0.SKIEUXM:user/release-keys";
+        description = "renoir_eea-user 12 RKQ1.201112.002 V13.0.5.0.SKIEUXM release-keys";
         mod_device = "renoir_eea_global";
     } else if (region == "JP") {
         model = "M2101K9R";
         device = "renoir";
-        fingerprint = "Xiaomi/renoir_jp/renoir:11/RKQ1.201112.002/V12.5.4.0.RKIJPXM:user/release-keys";
-        marketname  = "Mi 11 Lite 5G";
-        description = "renoir-user 11 RKQ1.201112.002 V12.5.4.0.RKIJPXM release-keys";
+        fingerprint = "Xiaomi/renoir_jp/renoir:12/RKQ1.201112.002/V13.0.3.0.SKIJPXM:user/release-keys";
+        description = "renoir-user 12 RKQ1.201112.002 V13.0.3.0.SKIJPXM release-keys";
         mod_device = "renoir_jp_global";
     } else {
         model = "M2101K9G";
         device = "renoir";
-        fingerprint = "Xiaomi/renoir/renoir:11/RKQ1.201112.002/V12.5.5.0.RKIMIXM:user/release-keys";
-        marketname = "Mi 11 Lite 5G";
-        description = "renoir-user 11 RKQ1.201112.002 V12.5.5.0.RKIMIXM release-keys";
+        fingerprint = "Xiaomi/renoir/renoir:12/RKQ1.201112.002/V13.0.4.0.SKIMIXM:user/release-keys";
+        description = "renoir-user 12 RKQ1.201112.002 V13.0.4.0.SKIMIXM release-keys";
         mod_device = "renoir_global";
-        }
+    }
 
+    marketname = "Mi 11 Lite 5G";
     set_ro_build_prop("fingerprint", fingerprint);
     set_ro_product_prop("device", device);
     set_ro_product_prop("model", model);
