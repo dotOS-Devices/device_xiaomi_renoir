@@ -17,7 +17,7 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_renoir
 TARGET_RECOVERY_DEVICE_MODULES := libinit_renoir
 
 # Kernel
-TARGET_KERNEL_CONFIG := vendor/renoir-qgki_defconfig
+TARGET_KERNEL_CONFIG += vendor/renoir_QGKI.config
 
 # Kernel modules
 BOOT_KERNEL_MODULES := \
